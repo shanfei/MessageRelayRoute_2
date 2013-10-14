@@ -26,7 +26,7 @@ object OutputError {
      implicit def readErrors = Json.reads[OutputError]
 }
 
-case class Input(message:String, telNumbers:ListBuffer[String])
+case class Input(message:String, recipients:ListBuffer[String])
 
 case class NetRoute(ip:String,recipients:ListBuffer[String])
 

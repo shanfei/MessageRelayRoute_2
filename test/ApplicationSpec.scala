@@ -54,7 +54,7 @@ class ApplicationSpec extends Specification {
        running(FakeApplication()) {
           val json = Json.obj(
         	 "message" -> "test@example.com",
-             "telNumbers" -> Seq("1234567890","1234567890")
+             "recipients" -> Seq("1234567890","1234567890")
            )
 
 			val req = FakeRequest("POST","/messageRelay").withJsonBody(json)

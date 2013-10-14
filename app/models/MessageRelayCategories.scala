@@ -35,7 +35,7 @@ object dispatcher {
         val output:Output = Output(input.message,ListBuffer[NetRoute]())
 
 
-        var telNumbers = input.telNumbers.size
+        var telNumbers = input.recipients.size
 
         messageRelayCategories.foreach(
             {  messageRelayCategory =>
@@ -47,7 +47,7 @@ object dispatcher {
                     //build output
                     val recipients = ListBuffer[String]();
                     for (i <- 0 until (neededSubNetNumbers * messageRelayCategory.messageThroughput)) {
-                      recipients += input.telNumbers.remove(0)
+                      recipients += input.recipients.remove(0)
                     }
 
 
