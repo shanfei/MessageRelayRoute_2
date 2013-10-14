@@ -28,7 +28,7 @@ object dispatcher {
     def dispatch(input_p:Option[Input]):OutputT = {
 
         if (input_p == None) {
-          return OutputError(1,"request input is null","request input is null")
+          return OutputError(1,"request input is Wrong","request input is Wrong")
         }
 
         val input = input_p.get
